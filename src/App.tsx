@@ -54,7 +54,7 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center flex-col  h-screen">
+    <div className="flex items-center justify-center flex-col ">
       <h2 className="text-2xl mb-4 text-white font-semibold shadow-lg">Score: {score}</h2>
       <button 
         onClick={handleResetGame} 

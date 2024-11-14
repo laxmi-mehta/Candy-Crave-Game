@@ -6,8 +6,10 @@ function Tile({ candy, candyId }: { candy: string; candyId: number }) {
 
   return (
     <div
-      className="h-24 w-24 flex justify-center items-center m-0.5 rounded-lg select-none"
+      className="flex justify-center items-center m-1 rounded-lg select-none"
       style={{
+        width: '100%', // Full width of the grid cell
+        height: '100%', // Full height of the grid cell
         boxShadow: "inset 5px 5px 15px #062525,inset -5px -5px 15px #aaaab7bb",
       }}
     >
@@ -15,7 +17,7 @@ function Tile({ candy, candyId }: { candy: string; candyId: number }) {
         <img
           src={candy}
           alt=""
-          className="h-20 w-20"
+          className="h-full w-full object-cover" // Ensure the image covers the tile
           draggable={true}
           onDragStart={(e) => dispatch(dragStart(e.target))}
           onDragOver={(e) => e.preventDefault()}
